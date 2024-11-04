@@ -3,6 +3,7 @@ import Banner from "../components/Banner/Banner.jsx";
 import Brands from "../components/Brands/Brands.jsx";
 import Services from "../components/Services/Services.jsx";
 import Details from "../components/Details/Details.jsx";
+import About from "../components/About/About.jsx";
 
 const WebPage = () => {
   return (
@@ -13,6 +14,7 @@ const WebPage = () => {
       <Brands/>
       <Services/>
       <Details/>
+      <About/>
     </div>
   );
 };
