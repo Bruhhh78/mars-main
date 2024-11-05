@@ -9,6 +9,7 @@ import About from "./components/About/About.jsx";
 import Contact from "./components/Contact/Contact.jsx";
 import TieupBrands from "./components/TieupBrands/TieupBrands.jsx";
 import Appointment from "./components/Appointment/Appointment.jsx";
+import Maintenance from "./components/Maintenance/Maintenance.jsx";
 
 const App = () => {
   return (
@@ -33,6 +34,9 @@ const App = () => {
           </Route>
           <Route path="/appointment">
             <Route index element={<Appointment />} />
+          </Route>
+          <Route path="/maintenance">
+            <Route index element={<Maintenance />} />
           </Route>
         </Route>
       </Routes>

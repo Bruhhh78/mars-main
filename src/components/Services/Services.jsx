@@ -1,10 +1,11 @@
 import React from "react";
 import "./Services.css";
 import "./utilities.css";
+import { NavLink } from "react-router-dom";
 
 const Services = () => {
   return (
-    <section className="sc-services" style={{margin:"20px"}}>
+    <section className="sc-services" style={{ margin: "20px" }}>
       <div className="services-shape">
         <img src="/curve-shape-1.png" alt="" />
       </div>
@@ -32,10 +33,7 @@ const Services = () => {
           <div className="services-list">
             <div className="services-item">
               <div className="item-icon">
-                <img
-                  src="/service-icon-3.png"
-                  alt="service icon"
-                />
+                <img src="/service-icon-3.png" alt="service icon" />
               </div>
               <h5 className="item-title fw-7">Medical Equipments</h5>
               <p className="text">
@@ -45,10 +43,7 @@ const Services = () => {
 
             <div className="services-item">
               <div className="item-icon">
-                <img
-                  src="/service-icon-5.png"
-                  alt="service icon"
-                />
+                <img src="/service-icon-5.png" alt="service icon" />
               </div>
               <h5 className="item-title fw-7">Healthcare Furniture</h5>
               <p className="text">
@@ -59,10 +54,7 @@ const Services = () => {
 
             <div className="services-item">
               <div className="item-icon">
-                <img
-                  src="/service-icon-4.png"
-                  alt="service icon"
-                />
+                <img src="/service-icon-4.png" alt="service icon" />
               </div>
               <h5 className="item-title fw-7">Hospital Setup</h5>
               <p className="text">
@@ -73,10 +65,7 @@ const Services = () => {
 
             <div className="services-item">
               <div className="item-icon">
-                <img
-                  src="/service-icon-6.png"
-                  alt="service icon"
-                />
+                <img src="/service-icon-6.png" alt="service icon" />
               </div>
               <h5 className="item-title fw-7">Detailed Info</h5>
               <p className="text">
@@ -87,9 +76,11 @@ const Services = () => {
           </div>
 
           <div className="d-flex align-items-center justify-content-center services-main-btn">
-            <button type="button" className="btn btn-primary-outline">
-              Learn more
-            </button>
+            <NavLink to="/maintenance">
+              <button type="button" className="btn btn-primary-outline">
+                Maintenence Page
+              </button>
+            </NavLink>
           </div>
         </div>
       </div>
