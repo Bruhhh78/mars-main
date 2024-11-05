@@ -2,6 +2,7 @@ import React from "react";
 import "./Banner.css";
 import "./Utilities.css";
 import { motion } from "framer-motion";
+import { NavLink } from "react-router-dom";
 
 const Banner = () => {
   return (
@@ -24,9 +25,9 @@ const Banner = () => {
                 Interio, and Pheonix to provide you with the best medical
                 facilities, equipment, and Lab setup for your Hospital.
               </p>
-              <a href="#" className="btn btn-secondary">
+              <NavLink to="/appointment" className="btn btn-secondary">
                 Book Appointment
-              </a>
+              </NavLink>
             </div>
           </div>
 

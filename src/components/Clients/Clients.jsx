@@ -4,21 +4,21 @@ import "./Utilities.css";
 
 const Clients = () => {
   const imagePaths = [
-    "/public/bhu.51f1d1f0717fae22b92c.png",
-    "/public/bhumc.7ee5b10e393bb845a81c.jpg",
-    "/public/brdmc.e29a7bfe5c9c8078551b.png",
-    "/public/firoza.8efca984438f767f9fed.webp",
-    "/public/gsvm.0ef4c9e1e4d9015c5eaf.jpg",
-    "/public/hmc.0f3052af56b663e57674.jpg",
-    "/public/integral.f930dc51d1c0061f2433.jpg",
-    "/public/kgmc.fa9a6e1636b677b291f4.jpg",
-    "/public/Mayo clicnic.jpeg",
-    "/public/mlbmc.b250207dd9084de86f6d.jpg",
-    "/public/mnmc.ce5948c5645d36ac129c.jpg",
-    "/public/patiala.c4efcf386075c16c38e7.png",
-    "/public/rmcbd.3803ade23a53002322c1.jpg",
-    "/public/rmlimc.f9c5ad5b3ed8a81f5ad3.jpg",
-    "/public/sgmpims.e5d1af847989cf53623c.png",
+    "/bhu.51f1d1f0717fae22b92c.png",
+    "/bhumc.7ee5b10e393bb845a81c.jpg",
+    "/brdmc.e29a7bfe5c9c8078551b.png",
+    "/firoza.8efca984438f767f9fed.webp",
+    "/gsvm.0ef4c9e1e4d9015c5eaf.jpg",
+    "/hmc.0f3052af56b663e57674.jpg",
+    "/integral.f930dc51d1c0061f2433.jpg",
+    "/kgmc.fa9a6e1636b677b291f4.jpg",
+    "/Mayo clicnic.jpeg",
+    "/mlbmc.b250207dd9084de86f6d.jpg",
+    "/mnmc.ce5948c5645d36ac129c.jpg",
+    "/patiala.c4efcf386075c16c38e7.png",
+    "/rmcbd.3803ade23a53002322c1.jpg",
+    "/rmlimc.f9c5ad5b3ed8a81f5ad3.jpg",
+    "/sgmpims.e5d1af847989cf53623c.png",
   ];
 
   const carouselWrapperRef = useRef(null);

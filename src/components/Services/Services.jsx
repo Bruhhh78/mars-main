@@ -4,7 +4,7 @@ import "./utilities.css";
 
 const Services = () => {
   return (
-    <section className="sc-services">
+    <section className="sc-services" style={{margin:"20px"}}>
       <div className="services-shape">
         <img src="/curve-shape-1.png" alt="" />
       </div>
