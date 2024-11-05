@@ -1,0 +1,34 @@
+.tieup-brands-container {
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Add padding */
+    max-width: 1200px; /* Set a max width */
+  }
+  
+  .title {
+    text-align: center;
+    font-size: 2em; /* Base font size */
+    color: rgb(135, 135, 169);
+    margin-bottom: 20px; /* Spacing below the title */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .title {
+      font-size: 2em; /* Smaller font size on smaller screens */
+    }
+    
+    .tieup-brands-container {
+      padding: 10px; /* Less padding on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .title {
+      font-size: 2em; /* Even smaller font size on very small screens */
+    }
+    
+    .tieup-brands-container {
+      padding: 5px; /* Minimal padding on very small screens */
+    }
+  }
+  
