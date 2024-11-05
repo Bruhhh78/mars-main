@@ -1,6 +1,7 @@
 import React from "react";
 import "./Header.css";
 import "./Utilities.css"
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -25,12 +26,12 @@ const Header = () => {
 
               <ul className="navbar-nav d-flex align-items-center">
                 <li className="nav-item">
-                  <a
-                    href="/"
+                  <NavLink
+                    to="/"
                     className="nav-link text-white nav-active text-nowrap"
                   >
                     Home
-                  </a>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
                   <a href="#" className="nav-link text-white text-nowrap">
@@ -48,9 +49,9 @@ const Header = () => {
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a href="#" className="nav-link text-white text-nowrap">
+                  <NavLink to="/products" className="nav-link text-white text-nowrap">
                     Products
-                  </a>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
                   <a href="#" className="nav-link text-white text-nowrap">

@@ -3,7 +3,7 @@ import "./Article.css";
 import "./Utilities.css";
 
 const Article = ({ imgSrc, title, text, linkText, linkHref }) => (
-    <article className="articles-item" style={{margin:"10px"}}>
+    <article className="articles-item" style={{margin:"20px"}}>
       <div className="item-img">
         <img src={imgSrc} alt={title} />
       </div>
