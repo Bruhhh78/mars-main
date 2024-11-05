@@ -21,7 +21,6 @@ const Brands = () => {
         <figure
           style={{
             width: "220px",
-            cursor: "pointer",
             height: "auto",
             display: "inline-block",
           }}
@@ -35,7 +34,6 @@ const Brands = () => {
         <figure
           style={{
             width: "220px",
-            cursor: "pointer",
             height: "auto",
             display: "inline-block",
           }}
@@ -49,7 +47,6 @@ const Brands = () => {
         <figure
           style={{
             width: "120px",
-            cursor: "pointer",
             height: "auto",
             display: "inline-block",
           }}
@@ -63,7 +60,6 @@ const Brands = () => {
         <figure
           style={{
             width: "250px",
-            cursor: "pointer",
             height: "auto",
             display: "inline-block",
           }}
