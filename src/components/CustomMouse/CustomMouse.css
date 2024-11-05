@@ -1,0 +1,9 @@
+.custom-cursor {
+    position: fixed;
+    pointer-events: none; /* Prevent interaction with the cursor */
+    width: 20px; /* Adjust width and height as desired */
+    height: 20px;
+    border-radius: 50%; /* Set circular shape */
+    background-color: #458ff6; /* Customize background color */
+    z-index: 99999999; /* Ensure cursor stays on top of other elements */
+  }
