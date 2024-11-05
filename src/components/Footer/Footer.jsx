@@ -73,7 +73,7 @@ const Footer = () => {
                 </li>
               </ul>
               <p className="text-white copyright-text">
-                &copy; Mars Healthcare PTY LTD 2024. All rights reserved.
+                &copy; Mars Healthcare Fintech LTD 2024. All rights reserved.
               </p>
             </div>
           </div>
