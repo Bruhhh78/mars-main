@@ -4,7 +4,7 @@ import "./TeamLead.css";
 const TeamLead = () => {
   return (
     <>
-      <h1 className="pt-32 text-4xl font-semibold text-center text-blue-800 ">
+      <h1 className="pt-32 text-4xl font-semibold text-center text-blue-500 ">
         Our Leaders
       </h1>
       <div className="main">

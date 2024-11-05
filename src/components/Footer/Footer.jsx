@@ -10,10 +10,10 @@ const Footer = () => {
         <div className="footer-content">
           <div className="footer-list d-grid text-white">
             <div className="footer-item">
-              <a href="#" className="navbar-brand d-flex align-items-center">
+              <NavLink to="/" className="navbar-brand d-flex align-items-center">
                 <span className="brand-shape d-inline-block text-white">M</span>
                 <span className="brand-text fw-7">Mars Healthcare</span>
-              </a>
+              </NavLink>
               <p className="text-white">
                 We work with the Best Brands that includes Philips, Godrej
                 Interio and Pheonix to provide you with the best medical
