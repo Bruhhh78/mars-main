@@ -26,3 +26,4 @@ $(document).ready(function(){
         $('.navbar-box').removeClass("navbar-box-show");
     })
 });
+

@@ -4,6 +4,7 @@ import Brands from "../components/Brands/Brands.jsx";
 import Services from "../components/Services/Services.jsx";
 import Details from "../components/Details/Details.jsx";
 import About from "../components/About/About.jsx";
+import Clients from "../components/Clients/Clients.jsx";
 
 const WebPage = () => {
   return (
@@ -15,6 +16,7 @@ const WebPage = () => {
       <Services/>
       <Details/>
       <About/>
+      <Clients/>
     </div>
   );
 };
