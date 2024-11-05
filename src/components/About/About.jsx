@@ -16,15 +16,15 @@ const About = () => {
                 <h3 className="title-box-name">About Us</h3>
                 <div className="title-separator mx-auto"></div>
               </div>
-              <p className="text title-box-text">
-                We create healing environments that combine functionality and
-                aesthetics, prioritizing compassionate, patient-centric
-                healthcare. By pursuing advancements in technology and design,
-                we aim to shape the future of healthcare infrastructure. Our
-                commitment to excellence is reflected in every facility we
-                touch, contributing to the well-being of communities worldwide.
-              </p>
             </div>
+            <p className="text title-box-text">
+              We create healing environments that combine functionality and
+              aesthetics, prioritizing compassionate, patient-centric
+              healthcare. By pursuing advancements in technology and design, we
+              aim to shape the future of healthcare infrastructure. Our
+              commitment to excellence is reflected in every facility we touch,
+              contributing to the well-being of communities worldwide.
+            </p>
           </div>
         </div>
       </div>
