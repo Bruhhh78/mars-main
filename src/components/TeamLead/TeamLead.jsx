@@ -10,7 +10,7 @@ const TeamLead = () => {
       <div className="main">
         <div className="profile-card">
           <div className="img">
-            <img src="public/Meenu Srivastava.jpg" alt="Meenu Srivastava" />
+            <img src="Meenu Srivastava.jpg" alt="Meenu Srivastava" />
           </div>
           <div className="caption">
             <h3>Meenu Srivastava</h3>
@@ -25,7 +25,7 @@ const TeamLead = () => {
 
         <div className="profile-card">
           <div className="img">
-            <img src="public/Rakesh Kumar Srivastava.jpg" alt="Rakesh Kumar Srivastava" />
+            <img src="Rakesh Kumar Srivastava.jpg" alt="Rakesh Kumar Srivastava" />
           </div>
           <div className="caption">
             <h3>Rakesh Kumar Srivastava</h3>
