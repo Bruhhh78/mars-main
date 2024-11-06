@@ -1,0 +1,14 @@
+{
+    "data": {
+        "name": "ClearVue 650 Ultrasound System",
+        "image": "Ultrasound/clearvue-650-ultrasound-system-125x125.webp",
+        "category": "Ultrasound Machine",
+        "specs": {
+            "Imaging Mode": "2D",
+            "Monitor Size": "54.6cm",
+            "Degree Of Movement": "180",
+            "Height Adjusted Monitor": "Yes"
+        },
+        "userEmail": "anmol@anmol.com"
+    }
+}
