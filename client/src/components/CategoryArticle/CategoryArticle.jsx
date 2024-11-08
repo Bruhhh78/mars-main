@@ -11,7 +11,7 @@ const CategoryArticle = ({ imgSrc, title, text, linkText, linkTo }) => (
     <div className="item-body">
       <div className="item-title">{title}</div>
       <div className="text">
-        {text} {/* Render text as-is without wrapping in <p> */}
+        {text} 
       </div>
       <NavLink
         to={linkTo}

@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 import useProductByCategory from "../../hooks/useProductByCategory";
 import CategoryArticle from "../CategoryArticle/CategoryArticle"; // Import CategoryArticle
 import "./ProductList.css";
-import "./Utilities.css";
 
 const ProductList = () => {
   // Get the category parameter from the URL
@@ -37,9 +36,10 @@ const ProductList = () => {
           <div>
             {/* Check if there are products to display */}
             {data && data.products && data.products.length > 0 ? (
-              <div className="product-list-wrapper">
+              <div className="product-list-wrapper ">
                 {data.products.map((product) => (
-                  <div key={product.id} className="article-wrapper articles-list d-flex flex-wrap justify-content-center ">
+                  <div key={product.id} className="articles-list">
+                    <div className="article-card">
                     <CategoryArticle
                       imgSrc={product.image}
                       title={product.name}
@@ -55,6 +55,7 @@ const ProductList = () => {
                       linkText="Get More Detail"
                       linkTo={`/product/${product.id}`}
                     />
+                  </div>
                   </div>
                 ))}
               </div>
