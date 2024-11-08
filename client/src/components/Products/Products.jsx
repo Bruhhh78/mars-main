@@ -6,35 +6,35 @@ import Article from "../Article/Article";
 const Products = () => {
   const articles = [
     {
-      imgSrc: "/CT-Scan_Machine.jpg",
+      imgSrc: "https://5.imimg.com/data5/SELLER/Default/2022/1/IW/ZZ/QT/91630582/untitled-250x250.png",
       title: "CT Scan Machine",
       text: "In this case, the role of the health laboratory is very important to do a disease detection ...",
       linkText: "View CT-Scan Machines",
       linkHref: "#",
     },
     {
-      imgSrc: "/Diagnostic_Machine.jpg",
+      imgSrc: "https://5.imimg.com/data5/SELLER/Default/2022/1/YY/OR/TJ/91630582/untitled-250x250.png",
       title: "Diagnostic Machine",
       text: "Herbal medicine is very widely used at this time because of its very good for your health ...",
       linkText: "View Diagnostic Machines",
       linkHref: "#",
     },
     {
-      imgSrc: "/Oxygen_Concentrator.jpg",
+      imgSrc: "/Oxygen_Concentrator_New.jpg",
       title: "Oxygen Concentrator",
       text: "A healthy lifestyle should start from now and also for your skin health ...",
       linkText: "View Oxygen Concentrator Machines",
       linkHref: "#",
     },
     {
-      imgSrc: "/Ultrasound_Machine.jpg",
+      imgSrc: "/Ultrasound_Machine_New2.jpg",
       title: "Ultrasound Machine",
       text: "A healthy lifestyle should start from now and also for your skin health ...",
       linkText: "View Ultrasound Machines",
       linkHref: "#",
     },
     {
-      imgSrc: "/X-Ray.jpg",
+      imgSrc: "http://5.imimg.com/data5/GLADMIN/VideoImage/2023/9/340840673/UE/AV/DF/91630582/mobile-diagnost-wdr-500x500.jpg",
       title: "X-Ray",
       text: "A healthy lifestyle should start from now and also for your skin health ...",
       linkText: "View X-Ray Machines",
