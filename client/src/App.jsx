@@ -9,25 +9,33 @@ import Contact from "./components/Contact/Contact.jsx";
 import TieupBrands from "./components/TieupBrands/TieupBrands.jsx";
 import Appointment from "./components/Appointment/Appointment.jsx";
 import Maintenance from "./components/Maintenance/Maintenance.jsx";
-import CustomMouse from "./components/CustomMouse/CustomMouse.jsx"; // Import the CustomMouse component
+import CustomMouse from "./components/CustomMouse/CustomMouse.jsx";
+import { QueryClient, QueryClientProvider } from "react-query"; // Import the CustomMouse component
+import ProductList from "./components/ProductList/ProductList.jsx";
+// import ProductList from "./components/ProductList/ProductList.jsx";
 
 const App = () => {
+  const queryClient = new QueryClient();
+
   return (
-    <BrowserRouter>
-      <CustomMouse /> {/* Add the CustomMouse component here */}
-      <Routes>
-        <Route element={<Layout />}>
-          <Route path="/" element={<WebPage />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/brands" element={<TieupBrands />} />
-          <Route path="/appointment" element={<Appointment />} />
-          <Route path="/maintenance" element={<Maintenance />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <QueryClientProvider client={queryClient}>
+      <BrowserRouter>
+        {/* <CustomMouse /> Add the CustomMouse component here */}
+        <Routes>
+          <Route element={<Layout />}>
+            <Route path="/" element={<WebPage />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/brands" element={<TieupBrands />} />
+            <Route path="/appointment" element={<Appointment />} />
+            <Route path="/maintenance" element={<Maintenance />} />
+            <Route path="/category/:category" element={<ProductList/>}/>
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </QueryClientProvider>
   );
 };
 

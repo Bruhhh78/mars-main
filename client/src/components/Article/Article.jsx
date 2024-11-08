@@ -1,8 +1,9 @@
 import React from "react";
 import "./Article.css";
 import "./Utilities.css";
+import { NavLink } from "react-router-dom";
 
-const Article = ({ imgSrc, title, text, linkText, linkHref }) => (
+const Article = ({ imgSrc, title, text, linkText, linkTo }) => (
     <article className="articles-item" style={{margin:"20px"}}>
       <div className="item-img">
         <img src={imgSrc} alt={title} />
@@ -10,12 +11,12 @@ const Article = ({ imgSrc, title, text, linkText, linkHref }) => (
       <div className="item-body">
         <div className="item-title">{title}</div>
         <p className="text">{text}</p>
-        <a href={linkHref} className="item-link text-blue d-flex align-items-baseline">
+        <NavLink to={linkTo} className="item-link text-blue d-flex align-items-baseline">
           <span className="item-link-text">{linkText}</span>
           <span className="item-link-icon">
             <i className="fas fa-arrow-right"></i>
           </span>
-        </a>
+        </NavLink>
       </div>
     </article>
   );
