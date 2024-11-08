@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import useProductByCategory from "../../hooks/useProductByCategory";
 import CategoryArticle from "../CategoryArticle/CategoryArticle"; // Import CategoryArticle
 import "./ProductList.css";
+import { PuffLoader } from "react-spinners";
 
 const ProductList = () => {
   // Get the category parameter from the URL
@@ -10,13 +11,30 @@ const ProductList = () => {
 
   // Use the custom hook to fetch products by category
   const { data, isLoading, isError, refetch } = useProductByCategory(category);
-  console.log(data);
+  // console.log(data); //Logging the data
 
   // Loading state
-  if (isLoading) return <p>Loading...</p>;
+  if (isLoading) {
+    return (
+      <div className="flexColCenter" style={{ height: "60vh" }}>
+        <PuffLoader
+          height="80"
+          width="80"
+          radius={1}
+          color="#4066ff"
+          aria-label="puff-loading"
+        />
+      </div>
+    );
+  }
 
   // Error state
-  if (isError) return <p>Error loading products. Please try again.</p>;
+  if (isError)
+    return (
+      <div style={{ marginTop:"9rem" }}>
+        <h2 className="text-center" style={{ fontSize: "2em", color: "red" }}>Error While Fetching Products :(</h2>
+      </div>
+    );
 
   return (
     <section className="sc-articles">
@@ -40,22 +58,25 @@ const ProductList = () => {
                 {data.products.map((product) => (
                   <div key={product.id} className="articles-list">
                     <div className="article-card">
-                    <CategoryArticle
-                      imgSrc={product.image}
-                      title={product.name}
-                      text={
-                        <div>
-                          {Object.entries(product.specs).map(([key, value]) => (
-                            <div key={key}>
-                              <strong>{key}: </strong>{value}
-                            </div>
-                          ))}
-                        </div>
-                      }
-                      linkText="Get More Detail"
-                      linkTo={`/product/${product.id}`}
-                    />
-                  </div>
+                      <CategoryArticle
+                        imgSrc={product.image}
+                        title={product.name}
+                        text={
+                          <div>
+                            {Object.entries(product.specs).map(
+                              ([key, value]) => (
+                                <div key={key}>
+                                  <strong>{key}: </strong>
+                                  {value}
+                                </div>
+                              )
+                            )}
+                          </div>
+                        }
+                        linkText="Get More Detail"
+                        linkTo={`/product/${product.id}`}
+                      />
+                    </div>
                   </div>
                 ))}
               </div>
