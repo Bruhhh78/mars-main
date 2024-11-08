@@ -8,14 +8,14 @@ const Products = () => {
     {
       imgSrc: "https://5.imimg.com/data5/SELLER/Default/2022/1/IW/ZZ/QT/91630582/untitled-250x250.png",
       title: "CT Scan Machine",
-      text: "We offer Philips CT Scanner, Ingenuity Core Ct Scanner, Ingenuity Flex CT scanner, CT 5000 Ingenuity and Svity Scan CT 6000 ICT.",
+      text: "We offer Philips CT Scanner, Ingenuity Core Ct Scanner, Ingenuity Flex CT scanner, CT 5000 Ingenuity and Svity Scan CT 6000 ICT...",
       linkText: "View CT-Scan Machines",
       linkTo: "/category/CT-Scan Machine",
     },
     {
       imgSrc: "https://5.imimg.com/data5/SELLER/Default/2022/1/YY/OR/TJ/91630582/untitled-250x250.png",
       title: "Diagnostic Machine",
-      text: "We are a leading Distributor / Channel Partner of Digital Diagnost C90 from Lucknow, India.",
+      text: "We offer Digital Diagnost C90 We are a leading Distributor / Channel Partner of Digital Diagnost C90 from Lucknow, India...",
       linkText: "View Diagnostic Machines",
       linkTo: "/category/Diagnostic Machine",
     },
@@ -36,7 +36,7 @@ const Products = () => {
     {
       imgSrc: "/Ultrasound_Machine_New2.jpg",
       title: "Ultrasound Machine",
-      text: "Leading Distributor / Channel Partner of ClearVue 650 Ultrasound System, Clearvue 350 Ultrasound Machine, ClearVue 850 Ultrasound Machine, EPIQ CVxi Ultrasound Machine, EPIQ 7 Ultrasound System For Vascular and EPIQ 7 Philips Ultrasound Machine from Lucknow.",
+      text: "Leading Distributor / Channel Partner of ClearVue 650 Ultrasound System, Clearvue 350 Ultrasound Machine, ClearVue 850 Ultrasound Machine...",
       linkText: "View Ultrasound Machines",
       linkTo: "/category/Ultrasound Machine",
     },
