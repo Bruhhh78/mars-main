@@ -20,6 +20,13 @@ const Products = () => {
       linkHref: "#",
     },
     {
+      imgSrc: "http://5.imimg.com/data5/GLADMIN/VideoImage/2023/9/340840673/UE/AV/DF/91630582/mobile-diagnost-wdr-500x500.jpg",
+      title: "X-Ray",
+      text: "Our range of products include Mobile Diagnost WDR and Proxi Diagnost N90.",
+      linkText: "View X-Ray Machines",
+      linkHref: "#",
+    },
+    {
       imgSrc: "/Oxygen_Concentrator_New.jpg",
       title: "Oxygen Concentrator",
       text: "Our range of products include Everflo Home Oxygen System.",
@@ -31,13 +38,6 @@ const Products = () => {
       title: "Ultrasound Machine",
       text: "Leading Distributor / Channel Partner of ClearVue 650 Ultrasound System, Clearvue 350 Ultrasound Machine, ClearVue 850 Ultrasound Machine, EPIQ CVxi Ultrasound Machine, EPIQ 7 Ultrasound System For Vascular and EPIQ 7 Philips Ultrasound Machine from Lucknow.",
       linkText: "View Ultrasound Machines",
-      linkHref: "#",
-    },
-    {
-      imgSrc: "http://5.imimg.com/data5/GLADMIN/VideoImage/2023/9/340840673/UE/AV/DF/91630582/mobile-diagnost-wdr-500x500.jpg",
-      title: "X-Ray",
-      text: "Our range of products include Mobile Diagnost WDR and Proxi Diagnost N90.",
-      linkText: "View X-Ray Machines",
       linkHref: "#",
     },
   ];
