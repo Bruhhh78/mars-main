@@ -12,6 +12,7 @@ import Maintenance from "./components/Maintenance/Maintenance.jsx";
 import { QueryClient, QueryClientProvider } from "react-query"; // Import the CustomMouse component
 import ProductList from "./components/ProductList/ProductList.jsx";
 import AnimatedCursor from "./components/AnimatedCursor/AnimatedCursor.jsx";
+import MainProduct from "./pages/MainProduct/MainProduct.jsx";
 
 const App = () => {
   const queryClient = new QueryClient();
@@ -31,6 +32,7 @@ const App = () => {
             <Route path="/appointment" element={<Appointment />} />
             <Route path="/maintenance" element={<Maintenance />} />
             <Route path="/category/:category" element={<ProductList />} />
+            <Route path="/product/:id" element={<MainProduct/>}/>
           </Route>
         </Routes>
       </BrowserRouter>

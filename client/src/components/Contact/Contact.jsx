@@ -4,10 +4,6 @@ import CallButton from "../Buttons/CallButton";
 import ChatButton from "../Buttons/ChatButton";
 import EmailButton from "../Buttons/EmailButton";
 import MessageButton from "../Buttons/MessageButton";
-// import CallButton from "../Buttons/CallButton";
-// import ChatButton from "../Buttons/ChatButton";
-// import EmailButton from "../Buttons/EmailButton";
-// import MessageButton from "../Buttons/MessageButton";
 
 const Contact = () => {
   return (

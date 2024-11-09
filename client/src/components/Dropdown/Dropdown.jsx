@@ -57,7 +57,7 @@ const DropdownItem = React.forwardRef(({ imageSrc, alt, menuItems, isOpen, onCli
   };
 
   return (
-    <div className="dropdown-item flex flex-col items-center relative" ref={ref}>
+    <div className="dropdown-item flex flex-col items-center relative" style={{marginBottom:"136px" }} ref={ref}>
       <img
         onClick={onClick}
         src={imageSrc}

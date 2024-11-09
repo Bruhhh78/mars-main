@@ -61,18 +61,6 @@ const ProductList = () => {
                       <CategoryArticle
                         imgSrc={product.image}
                         title={product.name}
-                        text={
-                          <div>
-                            {Object.entries(product.specs).map(
-                              ([key, value]) => (
-                                <div key={key}>
-                                  <strong>{key}: </strong>
-                                  {value}
-                                </div>
-                              )
-                            )}
-                          </div>
-                        }
                         linkText="Get More Detail"
                         linkTo={`/product/${product.id}`}
                       />

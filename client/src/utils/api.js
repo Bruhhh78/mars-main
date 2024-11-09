@@ -27,3 +27,17 @@ export const getProductByCategory = async (category)=>{
     throw error;
   }
 } 
+
+// Get Property By Id
+
+export const getProductById = async (id) => {
+  try {
+    const response = await api.get(`/product/${id}`,{
+        timeout:10 *1000,
+    })
+    return handleResponse(response)
+  } catch (error) {
+    toast.error("Something Went Wrong While Fetching Product...")
+    throw error;
+  }
+}

@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 
 const CategoryArticle = ({ imgSrc, title, text, linkText, linkTo }) => (
   <article className="articles-item" style={{ margin: "20px" }}>
-    <div className="item-img">
+    <div className="item-img ">
       <img src={imgSrc} alt={title} />
     </div>
     <div className="item-body">
