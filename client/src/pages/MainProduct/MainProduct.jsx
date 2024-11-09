@@ -119,7 +119,7 @@ const MainProduct = () => {
         <div className="flex flex-col sm:flex-row -mx-2 mb-4">
           <div className="w-full sm:w-1/2 px-2 mb-4 sm:mb-0">
             <button className="w-full bg-gray-900 dark:bg-blue-500 text-white py-2 px-4 rounded-3xl font-bold hover:bg-blue-300 dark:hover:bg-blue-400 text-sm sm:text-lg">
-              Learn More
+              Book Visit
             </button>
           </div>
           <div className="w-full sm:w-1/2 px-2">
