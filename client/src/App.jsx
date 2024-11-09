@@ -11,7 +11,7 @@ import Appointment from "./components/Appointment/Appointment.jsx";
 import Maintenance from "./components/Maintenance/Maintenance.jsx";
 import { QueryClient, QueryClientProvider } from "react-query"; // Import the CustomMouse component
 import ProductList from "./components/ProductList/ProductList.jsx";
-import AnimateCursor from "react-animated-cursor";
+// import AnimatedCursor from "./components/AnimatedCursor/AnimatedCursor.jsx";
 
 const App = () => {
   const queryClient = new QueryClient();
@@ -19,20 +19,7 @@ const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
-        <AnimateCursor
-          innerSize={8}
-          outerSize={35}
-          innerScale={1}
-          outerScale={2}
-          outerAlpha={0}
-          hasBlendMorde={true}
-          innerStyle={{
-            backgroundColor: "lightpink",
-          }}
-          outerStyle={{
-            border: "3px solid blue",
-          }}
-        />
+        {/* <AnimatedCursor /> */}
         <Routes>
           <Route element={<Layout />}>
             <Route path="/" element={<WebPage />} />
