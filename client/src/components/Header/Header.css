@@ -82,9 +82,7 @@ button{
     min-height: 15vh;
     background-color: var(--clr-blue);
 }
-.header *{
-    color: var(--clr-white);
-}
+
 .navbar{
     padding: 56px 0 80px 0;
 }
