@@ -16,7 +16,12 @@ app.use(express.json()); // Parse JSON bodies
 app.use(cookieParser()); // Parse cookies
 
 // CORS configuration
-app.use(cors());
+app.use(
+  cors({
+    origin: "http://localhost:5173", //Frontend URL
+    credentials: true,
+  })
+);
 
 app.get("/", (req, res) => {
   console.log("Backend Working!");
@@ -24,7 +29,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/user", userRoute);
-app.use("/api/product",productRoute)
+app.use("/api/product", productRoute);
 
 // Start the server and listen on the defined port
 app.listen(PORT, () => {

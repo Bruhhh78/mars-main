@@ -3,7 +3,7 @@ import { Avatar, Button, Menu, Text } from "@mantine/core";
 import { useNavigate } from "react-router-dom";
 
 const ProfileMenu = ({ user, logout }) => {
-  console.log("UserData:", user);
+  // console.log("UserData:", user);
   const navigate = useNavigate();
   
   return (

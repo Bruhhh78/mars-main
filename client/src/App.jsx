@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout/Layout.jsx";
 import WebPage from "./pages/WebPage.jsx";
@@ -11,32 +11,40 @@ import Appointment from "./components/Appointment/Appointment.jsx";
 import Maintenance from "./components/Maintenance/Maintenance.jsx";
 import { QueryClient, QueryClientProvider } from "react-query"; // Import the CustomMouse component
 import ProductList from "./components/ProductList/ProductList.jsx";
-import AnimatedCursor from "./components/AnimatedCursor/AnimatedCursor.jsx";
+// import AnimatedCursor from "./components/AnimatedCursor/AnimatedCursor.jsx";
 import MainProduct from "./pages/MainProduct/MainProduct.jsx";
+import UserDetailContext from "./context/UserDetailContext.js";
 
 const App = () => {
   const queryClient = new QueryClient();
+  const [userDetails, setUserDetails] = useState({
+    favourites: [],
+    bookings: [],
+    token: null,
+  });
 
   return (
-    <QueryClientProvider client={queryClient}>
-      <BrowserRouter>
-        <AnimatedCursor />
-        <Routes>
-          <Route element={<Layout />}>
-            <Route path="/" element={<WebPage />} />
-            <Route path="/products" element={<Products />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/brands" element={<TieupBrands />} />
-            <Route path="/appointment" element={<Appointment />} />
-            <Route path="/maintenance" element={<Maintenance />} />
-            <Route path="/category/:category" element={<ProductList />} />
-            <Route path="/product/:id" element={<MainProduct/>}/>
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </QueryClientProvider>
+    <UserDetailContext.Provider value={{userDetails,setUserDetails}}>
+      <QueryClientProvider client={queryClient}>
+        <BrowserRouter>
+          {/* <AnimatedCursor /> */}
+          <Routes>
+            <Route element={<Layout />}>
+              <Route path="/" element={<WebPage />} />
+              <Route path="/products" element={<Products />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/brands" element={<TieupBrands />} />
+              <Route path="/appointment" element={<Appointment />} />
+              <Route path="/maintenance" element={<Maintenance />} />
+              <Route path="/category/:category" element={<ProductList />} />
+              <Route path="/product/:id" element={<MainProduct />} />
+            </Route>
+          </Routes>
+        </BrowserRouter>
+      </QueryClientProvider>
+    </UserDetailContext.Provider>
   );
 };
 
