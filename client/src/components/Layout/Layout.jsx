@@ -22,7 +22,7 @@ const Layout = () => {
 
         localStorage.setItem("access_token", token);
         setUserDetails((prev) => ({ ...prev, token }));
-        console.log("Access_Token: ", token);
+        // console.log("Access_Token: ", token);
 
         if (user.email) {
           await createUser(user.email, token);
