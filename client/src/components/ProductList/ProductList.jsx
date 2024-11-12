@@ -1,9 +1,9 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import useProductByCategory from "../../hooks/useProductByCategory";
 import CategoryArticle from "../CategoryArticle/CategoryArticle"; // Import CategoryArticle
 import "./ProductList.css";
 import { PuffLoader } from "react-spinners";
+import useProductByCategory from "../../pages/hooks/useProductByCategory";
 
 const ProductList = () => {
   // Get the category parameter from the URL

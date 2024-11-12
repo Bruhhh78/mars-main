@@ -1,5 +1,6 @@
 import { useQuery } from "react-query";
-import { getProductByCategory } from "../utils/api";
+import { getProductByCategory } from "../../utils/api";
+// import { getProductByCategory } from "../utils/api";
 
 const useProductByCategory = (category) => {
   const { data, isLoading, isError, refetch } = useQuery(
