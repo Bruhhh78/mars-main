@@ -12,9 +12,9 @@ import jwtCheck from "../config/auth0Config.js";
 const router = express.Router();
 
 router.post("/register", jwtCheck, createUser);
-router.post("/bookvisit/:id", bookVisit);
+router.post("/bookvisit/:id", jwtCheck, bookVisit);
 router.get("/allBookings", getAllBookings);
-router.post("/cancelBooking/:id", cancelBooking);
+router.post("/cancelBooking/:id", jwtCheck, cancelBooking);
 router.post("/toFav/:pid", toFav);
 router.get("/allFavs", getAllFavourites);
 

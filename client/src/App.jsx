@@ -14,6 +14,9 @@ import ProductList from "./components/ProductList/ProductList.jsx";
 // import AnimatedCursor from "./components/AnimatedCursor/AnimatedCursor.jsx";
 import MainProduct from "./pages/MainProduct/MainProduct.jsx";
 import UserDetailContext from "./context/UserDetailContext.js";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 
 const App = () => {
   const queryClient = new QueryClient();
@@ -43,6 +46,7 @@ const App = () => {
             </Route>
           </Routes>
         </BrowserRouter>
+        <ToastContainer />
       </QueryClientProvider>
     </UserDetailContext.Provider>
   );
