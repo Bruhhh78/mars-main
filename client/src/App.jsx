@@ -11,11 +11,11 @@ import Appointment from "./components/Appointment/Appointment.jsx";
 import Maintenance from "./components/Maintenance/Maintenance.jsx";
 import { QueryClient, QueryClientProvider } from "react-query"; // Import the CustomMouse component
 import ProductList from "./components/ProductList/ProductList.jsx";
-// import AnimatedCursor from "./components/AnimatedCursor/AnimatedCursor.jsx";
 import MainProduct from "./pages/MainProduct/MainProduct.jsx";
 import UserDetailContext from "./context/UserDetailContext.js";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+// import AnimatedCursor from "./components/AnimatedCursor/AnimatedCursor.jsx";
 
 
 const App = () => {

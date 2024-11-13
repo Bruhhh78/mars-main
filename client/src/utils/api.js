@@ -102,3 +102,23 @@ export const removeBooking = async (id, email, token) => {
     throw error;
   }
 };
+
+// Adding it to Favourites
+export const toFav = async(pid,email,token)=>{
+  try{
+    await api.post(
+      `/user/toFav/${pid}`,
+      {
+        email,
+      },
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
+  }catch(error){
+    toast.error("Someting went wrong, please try Again");
+    throw error;
+  }
+}

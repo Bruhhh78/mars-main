@@ -9,6 +9,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import UserDetailContext from "../../context/UserDetailContext";
 import BookingModal from "../../components/BookingModal/BookingModal";
 import { Button } from "@mantine/core";
+import AddToFavourites from "../../components/AddToFavourites/AddToFavourites";
 
 const MainProduct = () => {
   const { id } = useParams();
@@ -182,9 +183,7 @@ const MainProduct = () => {
             />
           </div>
           <div className="w-full sm:w-1/2 px-2 m-1 p-2">
-            <button className="w-full bg-gray-200 dark:bg-blue-500 text-gray-800 dark:text-white py-2 px-4 rounded-3xl font-bold hover:bg-blue-300 dark:hover:bg-blue-400 text-sm sm:text-lg">
-              Add to Favourites
-            </button>
+            <AddToFavourites id={id}/>
           </div>
         </div>
       </div>
