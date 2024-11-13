@@ -30,8 +30,6 @@ const BookingModal = ({ opened, setOpened, email, productId }) => {
     }));
   };
 
-  //   console.log(token)
-
   const { mutate, isLoading } = useMutation({
     mutationFn: () => bookVisit(value, productId, email, token),
     onSuccess: () => handleBookingSuccess(),
@@ -42,11 +40,13 @@ const BookingModal = ({ opened, setOpened, email, productId }) => {
   return (
     <Modal
       opened={opened}
-      onClose={() => setOpened(false)} // Use onClose to handle closing the modal
+      onClose={() => setOpened(false)}
       title="Select your date of visit"
-      centered
+      styles={{
+        title: { textAlign: 'center', width: '100%' },
+      }}
     >
-      <div className="flexColCenter" style={{gap:"1rem"}}>
+      <div className="flexColCenter" style={{ gap: "1rem" }}>
         <DatePicker value={value} onChange={setValue} minDate={new Date()} />
         <Button disabled={!value || isLoading} onClick={() => mutate()}>
           Book Visit
