@@ -147,7 +147,7 @@ const MainProduct = () => {
 
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row -mx-2 mb-4">
-          <div className="w-full sm:w-1/2 px-2 mb-4 sm:mb-0 m-1 p-2">
+          <div className="w-full sm:w-1/2 px-2 mb-4 sm:mb-0 m-2 p-2">
              {bookings?.map((booking) => booking.id).includes(id) ? (
               <>
                 <Button

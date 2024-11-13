@@ -5,8 +5,13 @@ import Footer from "../Footer/Footer.jsx";
 import { useAuth0 } from "@auth0/auth0-react";
 import UserDetailContext from "../../context/UserDetailContext.js";
 import { createUser } from "../../utils/api.js";
+import useFavourites from "../../pages/hooks/useFavourites.jsx";
+import useBookings from "../../pages/hooks/useBookings.jsx";
 
 const Layout = () => {
+  useFavourites();
+  useBookings()
+
   const { isAuthenticated, user, getAccessTokenWithPopup } = useAuth0();
   const { setUserDetails } = useContext(UserDetailContext);
 

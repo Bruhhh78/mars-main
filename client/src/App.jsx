@@ -15,6 +15,8 @@ import MainProduct from "./pages/MainProduct/MainProduct.jsx";
 import UserDetailContext from "./context/UserDetailContext.js";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import BookingsList from "./pages/BookingsList/BookingList.jsx";
+import AddToFavourite from "./pages/FavouritesList/FavouritesList.jsx";
 // import AnimatedCursor from "./components/AnimatedCursor/AnimatedCursor.jsx";
 
 
@@ -43,6 +45,8 @@ const App = () => {
               <Route path="/maintenance" element={<Maintenance />} />
               <Route path="/category/:category" element={<ProductList />} />
               <Route path="/product/:id" element={<MainProduct />} />
+              <Route path="/bookings" element={<BookingsList />} />
+              <Route path="/favourites" element={<AddToFavourite />} />
             </Route>
           </Routes>
         </BrowserRouter>

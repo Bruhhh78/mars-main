@@ -53,7 +53,7 @@ export const bookVisit = asyncHandler(async (req, res) => {
 // Function to get all the Bookings
 
 export const getAllBookings = asyncHandler(async (req, res) => {
-  const { email } = req.body;
+  const { email } = req.query;
 
   // Check if email is provided
   if (!email) {
@@ -188,8 +188,8 @@ export const toFav = asyncHandler(async (req, res) => {
 
 // Function to get all the favourites list of a user
 
-export const getAllFavourites = asyncHandler(async (req, res) => {
-  const { email } = req.body;
+export const getAllFavourites = async (req, res) => {
+  const { email } = req.query; // Use req.query instead of req.body
   try {
     const favProduct = await prisma.user.findUnique({
       where: { email },
@@ -197,6 +197,7 @@ export const getAllFavourites = asyncHandler(async (req, res) => {
     });
     res.send({ message: "Favourites List", favProduct });
   } catch (error) {
-    throw new Error(err.message);
+    res.status(500).json({ error: error.message });
   }
-});
+};
+
