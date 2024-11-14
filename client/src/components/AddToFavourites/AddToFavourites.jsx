@@ -29,7 +29,7 @@ const AddToFavourites = ({ id }) => {
         favourites: updateFavourites(id, prev.favourites),
       }));
       setIsFavourite(true);
-      toast.success("Added to favourites!", { position: "bottom-right" });
+      toast.success("Favourites Updated!", { position: "bottom-right" });
     },
   });
 
