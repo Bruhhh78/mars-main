@@ -1,0 +1,14 @@
+/* styles.css */
+
+.video-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .responsive-video {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  

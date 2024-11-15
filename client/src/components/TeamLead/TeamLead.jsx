@@ -28,7 +28,7 @@ const TeamLead = () => {
             <img src="Rakesh Kumar Srivastava.jpg" alt="Rakesh Kumar Srivastava" />
           </div>
           <div className="caption">
-            <h3>Rakesh Kumar Srivastava</h3>
+            <h3>Rajesh Kumar Srivastava</h3>
             <p>Managing Director</p>
           </div>
           <div className="social-links">

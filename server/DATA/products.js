@@ -1,7 +1,7 @@
 const products = [
     {
         id: 1,
-        name: "ClearVue 650 Ultrasound System",
+        name: "ClearVue 650 Ultrasound System", ok
         image: 'Ultrasound/clearvue-650-ultrasound-system-125x125.webp',
         category: "Ultrasound Machine",
         specs: {

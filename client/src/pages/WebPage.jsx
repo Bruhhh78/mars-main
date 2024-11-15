@@ -11,7 +11,7 @@ import TeamLead from "../components/TeamLead/TeamLead.jsx";
 const WebPage = () => {
   return (
     <div className="App">
-      <div  style={{ background: "#458ff6",minHeight:"65vh",color:"white", overflow: "hidden" }}>
+      <div className="p-5"  style={{ background: "transparent",color:"white", overflow: "hidden" }}>
         <Banner/>
       </div>
       <Brands/>
