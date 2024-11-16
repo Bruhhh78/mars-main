@@ -102,8 +102,6 @@ const GodrejInterioDropdown = React.forwardRef((props, ref) => {
   );
 });
 
-// Similar implementations for MasimoDropdown, PhilipsDropdown, and PhoenixDropdown...
-
 const MasimoDropdown = React.forwardRef((props, ref) => {
   const menuItems = [
     { name: "LinkedIn", url: "https://www.linkedin.com" },
@@ -125,10 +123,12 @@ const MasimoDropdown = React.forwardRef((props, ref) => {
 
 const PhilipsDropdown = React.forwardRef((props, ref) => {
   const menuItems = [
-    { name: "YouTube", url: "https://www.youtube.com" },
-    { name: "Reddit", url: "https://www.reddit.com" },
-    { name: "Quora", url: "https://www.quora.com" },
-    { name: "Tumblr", url: "https://www.tumblr.com" },
+    { name: "EPIQ Elite", url: "https://www.philips.co.in/healthcare/product/HC795098/epiq-elite-a-new-class-of-premium-ultrasound-has-arrived" },
+    { name: "EPIQ CVx", url: "https://www.philips.co.in/healthcare/product/HC795231/epiq-cvx-premium-cardiology-ultrasound-system" },
+    { name: "5500 Series", url: "https://www.philips.co.in/healthcare/product/HC795140/5000-series-hc795140-premium-compact-ultrasound-system" },
+    { name: "5500 CV", url: "https://www.philips.co.in/healthcare/product/HC795141/5500-cv-hc795141-philips-compact-ultrasound-system" },
+    { name: "Affiniti CVx", url: "https://www.philips.co.in/healthcare/product/795190/affiniti-cvx-everyday-ultrasound-system" },
+    { name: "Affiniti 70", url: "https://www.philips.co.in/healthcare/product/HC795210/affiniti-70-ultrasound-system" },
   ];
 
   return (
