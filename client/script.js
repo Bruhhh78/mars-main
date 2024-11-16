@@ -1,29 +1,42 @@
 $(document).ready(function(){
+    // Cache DOM elements
+    const $navbarBox = $('.navbar-box');
+    const $navbarShowBtn = $('.navbar-show-btn');
+    const $navbarHideBtn = $('.navbar-hide-btn');
+    const $navbarLinks = $('.navbar-box a'); // All links in navbar (including sub-menu)
+
+    // Initialize Owl Carousel
     $('.feedback-slider').owlCarousel({
         loop: false,
         margin: 10,
         nav: true,
         items: 1,
         autoplay: true,
-        navText: ["<i class = 'fas fa-arrow-left'></i>", "<i class = 'fas fa-arrow-right'></i>"]
+        navText: ["<i class='fas fa-arrow-left'></i>", "<i class='fas fa-arrow-right'></i>"]
     });
 
-    // stop animation on resize
+    // Stop animation on window resize
     let resizeTimer;
     $(window).resize(function(){
-        $(document.body).addClass('resize-animation-stopper');
+        $('body').addClass('resize-animation-stopper');
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(() => {
-            $(document.body).removeClass('resize-animation-stopper');
+            $('body').removeClass('resize-animation-stopper');
         }, 400);
     });
 
-    $('.navbar-show-btn').click(function(){
-        $('.navbar-box').addClass('navbar-box-show');
+    // Show navbar
+    $navbarShowBtn.on('click', function() {
+        $navbarBox.addClass('navbar-box-show');
     });
 
-    $('.navbar-hide-btn').click(function(){
-        $('.navbar-box').removeClass("navbar-box-show");
-    })
-});
+    // Hide navbar
+    $navbarHideBtn.on('click', function() {
+        $navbarBox.removeClass('navbar-box-show');
+    });
 
+    // Close navbar when any link is clicked (including sub-menu links)
+    $navbarLinks.on('click', function() {
+        $navbarBox.removeClass('navbar-box-show');
+    });
+});
