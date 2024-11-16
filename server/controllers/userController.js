@@ -74,7 +74,7 @@ export const getAllBookings = asyncHandler(async (req, res) => {
       bookings.bookedVisits.length === 0
     ) {
       return res
-        .status(404)
+        .status(200)
         .send({ message: "No Bookings Found for this User" });
     }
 

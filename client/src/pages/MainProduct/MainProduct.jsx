@@ -16,9 +16,6 @@ const MainProduct = () => {
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-
-    // Debug the data structure
-  //console.log(data); // Inspect the API response
   const [modalOpened, setModalOpened] = useState(false);
   const { validateLogin } = useAuthCheck();
   const { user } = useAuth0();
@@ -28,17 +25,21 @@ const MainProduct = () => {
     setUserDetails,
   } = useContext(UserDetailContext);
 
+  // Ensure bookings is an array before using .map()
+  const bookingsArray = Array.isArray(bookings) ? bookings : [];
+
   const { mutate: cancelBooking, isLoading: cancelling } = useMutation({
     mutationFn: () => removeBooking(id, user?.email, token),
     onSuccess: () => {
+      // Ensure prev.bookings is always an array
       setUserDetails((prev) => ({
         ...prev,
-        bookings: prev.bookings.filter((booking) => booking?.id !== id),
+        bookings: Array.isArray(prev.bookings) ? prev.bookings.filter((booking) => booking?.id !== id) : [],
       }));
-
       toast.success("Booking cancelled", { position: "bottom-right" });
     },
   });
+  
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -148,7 +149,7 @@ const MainProduct = () => {
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row -mx-2 mb-4">
           <div className="w-full sm:w-1/2 px-2 mb-4 sm:mb-0 m-2 p-2">
-             {bookings?.map((booking) => booking.id).includes(id) ? (
+            {bookingsArray.some((booking) => booking.id === id) ? (
               <>
                 <Button
                   variant="outline"
@@ -160,8 +161,8 @@ const MainProduct = () => {
                   <span>Cancel booking</span>
                 </Button>
                 <span>
-                  Your visit is already booked for date :{" "}
-                  {bookings?.filter((booking) => booking?.id === id)[0].date}
+                  Your visit is already booked for date:{" "}
+                  {bookingsArray.find((booking) => booking?.id === id)?.date}
                 </span>
               </>
             ) : (
@@ -183,7 +184,7 @@ const MainProduct = () => {
             />
           </div>
           <div className="w-full sm:w-1/2 px-2 m-1 p-2">
-            <AddToFavourites id={id}/>
+            <AddToFavourites id={id} />
           </div>
         </div>
       </div>

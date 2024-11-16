@@ -13,7 +13,7 @@ const router = express.Router();
 
 router.post("/register", jwtCheck, createUser);
 router.post("/bookvisit/:id", jwtCheck, bookVisit);
-router.get("/allBookings", getAllBookings);
+router.get("/allBookings",jwtCheck, getAllBookings);
 router.post("/cancelBooking/:id", jwtCheck, cancelBooking);
 router.post("/toFav/:pid", jwtCheck, toFav);
 router.get("/allFavs", getAllFavourites);

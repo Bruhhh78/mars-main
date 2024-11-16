@@ -11,7 +11,7 @@ const VideoPlayer = () => {
         muted
         loop
         playsInline
-        className="responsive-video"
+        className="responsive-video "
       />
     </div>
   );

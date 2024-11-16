@@ -79,12 +79,12 @@ button{
 /* header section  & navbar */
 .header{
     position: relative;
-    min-height: 15vh;
-    background-color: var(--clr-blue);
+    min-height: 10vh;
+    background-image: radial-gradient( circle farthest-corner at 48.4% 47.5%,  rgba(122,183,255,1) 0%, rgba(21,83,161,1) 90% );
 }
 
 .navbar{
-    padding: 56px 0 80px 0;
+    padding: 50px 0 50px 0;
 }
 .brand-and-toggler{
     width: 100%;

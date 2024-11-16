@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import useBookings from "../hooks/useBookings";
-import useProductDetails from "../hooks/useProductDetails";
 import { Spinner } from "react-bootstrap"; // Using Bootstrap's spinner for loading state
+import useProductDetailsForBookings from "../hooks/useProductDetailsForBookings";
 
 const BookingList = () => {
   const { data: bookings, isLoading: loadingBookings, isError: bookingError } = useBookings();
@@ -11,18 +11,24 @@ const BookingList = () => {
   if (bookingError) return <p>Error loading bookings</p>;
 
   return (
-    <div className="booking-list container mx-auto px-4 py-8">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-        {bookings?.map((booking) => (
-          <ProductCard key={booking.id} productId={booking.id} /> 
-        ))}
-      </div>
+    <div className="booking-list container mx-auto ">
+      {bookings && bookings.length > 0 ? (
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-4 py-8">
+          {bookings.map((booking) => (
+            <ProductCard key={booking.id} productId={booking.id} />
+          ))}
+        </div>
+      ) : (
+        <div>
+          <h2 className="text-center text-2xl text-gray-500 m-5 p-4">No Bookings Found :(</h2>
+        </div>
+      )}
     </div>
   );
 };
 
 const ProductCard = ({ productId }) => {
-  const { data: product, isLoading, isError } = useProductDetails(productId); // Use productId for fetching product details
+  const { data: product, isLoading, isError } = useProductDetailsForBookings(productId);
 
   if (isLoading) return <Spinner animation="border" />;
   if (isError || !product) return <p>Product not found</p>;
@@ -43,10 +49,9 @@ const ProductCard = ({ productId }) => {
             ))}
           </ul>
         </div>
-        {/* "Get More Details" Button linking to product details page */}
         <div className="mt-4">
           <Link
-            to={`/product/${productId}`} // Link now uses productId from booking.id
+            to={`/product/${productId}`}
             className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors duration-200"
           >
             Get More Details
