@@ -2,6 +2,7 @@ import React from "react";
 import "./Footer.css";
 import "./Utilities.css";
 import { NavLink } from "react-router-dom";
+import FooterBrochure from "../Brochures/FooterBrochure";
 
 const Footer = () => {
   return (
@@ -39,26 +40,7 @@ const Footer = () => {
               </ul>
             </div>
 
-            <div className="footer-item">
-              <h3 className="footer-item-title">Catalogs</h3>
-              <ul className="footer-links">
-                <li>
-                  <a href="#">CT Scan Machine</a>
-                </li>
-                <li>
-                  <a href="#">Diagnostic Machine</a>
-                </li>
-                <li>
-                  <a href="#">Oxygen Concentrator</a>
-                </li>
-                <li>
-                  <a href="#">Ultrasound Machine</a>
-                </li>
-                <li>
-                  <a href="#">X-Ray</a>
-                </li>
-              </ul>
-            </div>
+            <FooterBrochure/>
 
             <div className="footer-item">
               <h3 className="footer-item-title">Help</h3>

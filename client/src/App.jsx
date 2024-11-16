@@ -17,6 +17,11 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import BookingsList from "./pages/BookingsList/BookingList.jsx";
 import AddToFavourite from "./pages/FavouritesList/FavouritesList.jsx";
+import CTScanBrochure from "./components/Brochures/CTScanBrochure.jsx";
+import DiagnosticMachine from "./components/Brochures/DiagnosticMachine.jsx";
+import OxygenConcentrator from "./components/Brochures/OxygenConcentrator.jsx";
+import UltrasoundBrochure from "./components/Brochures/UltrasoundBrochure.jsx";
+import XRayBrochure from "./components/Brochures/XRayBrochure.jsx";
 // import AnimatedCursor from "./components/AnimatedCursor/AnimatedCursor.jsx";
 
 
@@ -47,6 +52,11 @@ const App = () => {
               <Route path="/product/:id" element={<MainProduct />} />
               <Route path="/bookings" element={<BookingsList />} />
               <Route path="/favourites" element={<AddToFavourite />} />
+              <Route path="/CtScanBrochure" element={<CTScanBrochure/>} />
+              <Route path="/DiagnosticMachine" element={<DiagnosticMachine/>} />
+              <Route path="/OxygenBrochure" element={<OxygenConcentrator />} />
+              <Route path="/UltraSoundBrochure" element={<UltrasoundBrochure/>} />
+              <Route path="/XRay" element={<XRayBrochure/>} />
             </Route>
           </Routes>
         </BrowserRouter>
