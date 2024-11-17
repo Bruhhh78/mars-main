@@ -3,7 +3,7 @@ import dayjs from "dayjs";
 import { toast } from "react-toastify";
 
 export const api = axios.create({
-  baseURL: "https://mars-healthcare.vercel.app/api",
+  baseURL: "https://mars-main-frontend.vercel.app/api",
 });
 
 // Helper Function to Handle API and Response and Errors
