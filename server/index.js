@@ -18,7 +18,7 @@ app.use(cookieParser()); // Parse cookies
 // CORS configuration
 app.use(
   cors({
-    origin: "http://localhost:5173", //Frontend URL
+    origin: "https://mars-main-frontend.vercel.app/", //Frontend URL
     credentials: true,
   })
 );
