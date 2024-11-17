@@ -1,6 +1,6 @@
 import React from "react";
 import "./Services.css";
-import "./utilities.css";
+import "./Utilities.css";
 import { NavLink } from "react-router-dom";
 
 const Services = () => {
