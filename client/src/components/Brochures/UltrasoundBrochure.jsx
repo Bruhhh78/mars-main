@@ -3,16 +3,17 @@ import React from 'react';
 const UltraSoundBrochure = () => {
   // List of brochure filenames or URLs
   const brochures = [
-    { name: 'Brochure 1', file: '/brochures/brochure1.pdf' },
-    { name: 'Brochure 2', file: '/brochures/brochure2.pdf' },
-    { name: 'Brochure 3', file: '/brochures/brochure3.pdf' },
-    { name: 'Brochure 4', file: '/brochures/brochure4.pdf' },
-    { name: 'Brochure 5', file: '/brochures/brochure5.pdf' },
-    { name: 'Brochure 6', file: '/brochures/brochure6.pdf' },
-    { name: 'Brochure 7', file: '/brochures/brochure7.pdf' },
-    { name: 'Brochure 8', file: '/brochures/brochure8.pdf' },
-    { name: 'Brochure 9', file: '/brochures/brochure9.pdf' },
-    { name: 'Brochure 10', file: '/brochures/brochure10.pdf' },
+    { name: 'ClearVue 350 Ultrasound System', file: '/brochures/clearvue-350-ultrasound-machine.pdf' },
+    { name: 'ClearVue 550 Ultrasound System', file: '/brochures/clearvue-550-ultrasound-system.pdf' },
+    { name: 'ClearVue 650 Ultrasound System', file: '/brochures/clearvue-650-ultrasound-system.pdf' },
+    { name: 'ClearVue 850 Ultrasound System', file: '/brochures/clearvue-850-ultrasound-machine.pdf' },
+    { name: 'Affinity 30', file: '/brochures/affiniti-30-ultrasound-system.pdf' },
+    { name: 'Affinity 50', file: '/brochures/affinity-50.pdf' },
+    { name: 'Affinity 70', file: '/brochures/Affinity70.pdf' },
+    { name: 'EPIQ CVXI Ultrasound Machine', file: '/brochures/epiq-cvxi-ultrasound-machine.pdf' },
+    { name: 'EPIQ Elite', file: '/brochures/Philips EPIQ Elite.pdf' },
+    { name: 'EPIQ CVX Ultrasound', file: '/brochures/epiq-cvx-ultrasound.pdf' },
+    { name: 'PHILIPS PALM SIZE ULTRASOUND ON YOUR ANDROID DEVICE LUMIFY', file: '/brochures/philips-palm-size-ultrasound-on-your-android-device-lumify.pdf' },
   ];
 
   // Function to handle brochure download

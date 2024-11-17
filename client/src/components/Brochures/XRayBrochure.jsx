@@ -3,16 +3,8 @@ import React from 'react';
 const XRayBrochure = () => {
   // List of brochure filenames or URLs
   const brochures = [
-    { name: 'Brochure 1', file: '/brochures/brochure1.pdf' },
-    { name: 'Brochure 2', file: '/brochures/brochure2.pdf' },
-    { name: 'Brochure 3', file: '/brochures/brochure3.pdf' },
-    { name: 'Brochure 4', file: '/brochures/brochure4.pdf' },
-    { name: 'Brochure 5', file: '/brochures/brochure5.pdf' },
-    { name: 'Brochure 6', file: '/brochures/brochure6.pdf' },
-    { name: 'Brochure 7', file: '/brochures/brochure7.pdf' },
-    { name: 'Brochure 8', file: '/brochures/brochure8.pdf' },
-    { name: 'Brochure 9', file: '/brochures/brochure9.pdf' },
-    { name: 'Brochure 10', file: '/brochures/brochure10.pdf' },
+    { name: 'Mobile Diagnost WDR', file: '/brochures/mobilediagnost-wdr.pdf' },
+    { name: 'Proxi Diagnost N90', file: '/brochures/proxidiagnost-n90.pdf' },
   ];
 
   // Function to handle brochure download

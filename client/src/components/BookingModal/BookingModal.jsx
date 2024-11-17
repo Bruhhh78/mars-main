@@ -18,22 +18,27 @@ const BookingModal = ({ opened, setOpened, email, productId }) => {
     toast.success("You have booked your visit", {
       position: "bottom-right",
     });
-    setUserDetails((prev) => ({
-      ...prev,
-      bookings: [
-        ...prev.bookings,
-        {
-          id: productId,
-          date: dayjs(value).format("DD/MM/YYYY"),
-        },
-      ],
-    }));
+    setUserDetails((prev = {}) => {
+      const currentBookings = Array.isArray(prev.bookings) ? prev.bookings : [];
+      return {
+        ...prev,
+        bookings: [
+          ...currentBookings,
+          {
+            id: productId,
+            date: dayjs(value).format("DD/MM/YYYY"),
+          },
+        ],
+      };
+    });
   };
 
   const { mutate, isLoading } = useMutation({
     mutationFn: () => bookVisit(value, productId, email, token),
     onSuccess: () => handleBookingSuccess(),
-    onErrorL: ({ response }) => toast.error(response.data.message),
+    onError: ({ response }) => {
+      toast.error(response?.data?.message || "An error occurred");
+    },
     onSettled: () => setOpened(false),
   });
 

@@ -32,7 +32,6 @@ const useFavourites = () => {
       }
     } catch (e) {
       console.error("Error fetching favourites:", e);
-      toast.error("Something went wrong while fetching favourites");
       throw e;
     }
   };
