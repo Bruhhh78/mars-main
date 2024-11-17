@@ -5,7 +5,7 @@ import { prisma } from "../config/prismaConfig.js";
 export const createProduct = asyncHandler(async (req, res) => {
     const { name, image, category, specs, userEmail } = req.body.data || {};
 
-    console.log("Received data:", req.body.data);  // Log the incoming request body
+    //console.log("Received data:", req.body.data);  // Log the incoming request body
 
     if (!name || !image || !category || !specs || !userEmail) {
         return res.status(400).send({ message: 'Missing required fields' });

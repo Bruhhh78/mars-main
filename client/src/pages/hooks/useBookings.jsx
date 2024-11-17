@@ -15,7 +15,7 @@ const useBookings = () => {
     if (!token || !email) return;
 
     try {
-      console.log("Sending request to /user/allBookings with email:", email);
+      // console.log("Sending request to /user/allBookings with email:", email);
       const res = await api.get(`/user/allBookings`, {
         params: { email }, // Pass email as a query parameter
         headers: {
@@ -23,7 +23,7 @@ const useBookings = () => {
         },
       });
 
-      console.log("Response data:", res.data);
+      // console.log("Response data:", res.data);
 
       // Return the response data directly as it is now an array of bookings
       return res.data;
@@ -44,7 +44,7 @@ const useBookings = () => {
     staleTime: 30000, // Data is considered fresh for 30 seconds
   });
 
-  console.log(data);
+  // console.log(data);
 
   // Store the refetch function to trigger it when necessary
   queryRef.current = refetch;

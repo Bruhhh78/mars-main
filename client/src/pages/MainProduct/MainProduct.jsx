@@ -47,7 +47,7 @@ const MainProduct = () => {
         setLoading(true);
         const productData = await getProductById(id);
         setProduct(productData.product); // Assuming response structure is { product: { ... } }
-        console.log("Fetched Product Data:", productData.product);
+        // console.log("Fetched Product Data:", productData.product);
       } catch (err) {
         setError(err);
         toast.error("Failed to load product data.");

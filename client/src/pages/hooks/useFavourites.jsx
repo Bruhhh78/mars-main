@@ -15,7 +15,7 @@ const useFavourites = () => {
     if (!token || !email) return;
   
     try {
-      console.log("Sending request to /user/allFavs with email:", email);
+      // console.log("Sending request to /user/allFavs with email:", email);
       const res = await api.get(`/user/allFavs`, {
         params: { email }, // Pass email as a query parameter
         headers: {
@@ -23,7 +23,7 @@ const useFavourites = () => {
         },
       });
   
-      console.log("Response data:", res.data);
+      // console.log("Response data:", res.data);
   
       if (res.data && res.data.message === "Favourites List") {
         return res.data.favProduct.favProductID;
@@ -47,7 +47,7 @@ const useFavourites = () => {
     staleTime: 30000, // Data is considered fresh for 30 seconds
   });
 
-  console.log(data);
+  // console.log(data);
 
   // Store the refetch function to trigger it when necessary
   queryRef.current = refetch;

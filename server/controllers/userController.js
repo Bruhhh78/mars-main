@@ -5,7 +5,7 @@ import { prisma } from "../config/prismaConfig.js";
 // Function to Create a New User
 
 export const createUser = asyncHandler(async (req, res) => {
-  console.log("Creating a user...");
+  // console.log("Creating a user...");
   let { email } = req.body;
 
   const userExists = await prisma.user.findUnique({ where: { email: email } });
@@ -200,4 +200,3 @@ export const getAllFavourites = async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 };
-
