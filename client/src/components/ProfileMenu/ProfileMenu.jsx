@@ -36,12 +36,12 @@ const ProfileMenu = ({ user, logout }) => {
           Favourites
         </Menu.Item>
 
-        <Menu.Item 
+{/*         <Menu.Item 
           onClick={() => navigate("./bookings", { replace: true })}
           sx={{ color: "black !important" }} // Apply !important to ensure the style
         >
           Bookings
-        </Menu.Item>
+        </Menu.Item> */}
 
         <Menu.Item
           onClick={() => {
