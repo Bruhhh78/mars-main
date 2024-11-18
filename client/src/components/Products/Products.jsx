@@ -27,13 +27,6 @@ const Products = () => {
       linkTo: "/category/X-Ray",
     },
     {
-      imgSrc: "/Oxygen_Concentrator_New.jpg",
-      title: "Oxygen Concentrator",
-      text: "Our range of products include Everflo Home Oxygen System.",
-      linkText: "View Oxygen Concentrator Machines",
-      linkTo: "/category/Oxygen Concentrator",
-    },
-    {
       imgSrc: "/Ultrasound_Machine_New2.jpg",
       title: "Ultrasound Machine",
       text: "Leading Distributor / Channel Partner of ClearVue 650 Ultrasound System, Clearvue 350 Ultrasound Machine, ClearVue 850 Ultrasound Machine...",
