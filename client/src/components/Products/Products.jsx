@@ -41,11 +41,25 @@ const Products = () => {
       linkTo: "/category/Ultrasound Machine",
     },
     {
-      imgSrc: "https://images.philips.com/is/image/philipsconsumer/e3dd3cbddbd54734bfb5ab7600d9a27c?&wid=305&hei=171&$jpglarge$",
+      imgSrc: "https://www.philips.co.in/c-dam/b2bhc/master/image-guided-therapy/mobile-c-arm/orthopedics/zenition-70.jpg",
       title: "C-ARM",
-      text: "Our Azurion Image Guided Therapy System allows you to easily and confidently perform a wide range of routine...",
+      text: "Philips Zenition 10 provides a cost-effective imaging solution for routine surgery, delivers the speed and efficiency needed to deal with high patient..",
       linkText: "View C-ARM",
       linkTo: "/category/C-ARM",
+    },
+    {
+      imgSrc: "https://images.philips.com/is/image/philipsconsumer/e3dd3cbddbd54734bfb5ab7600d9a27c?&wid=305&hei=171&$jpglarge$",
+      title: "Azurion",
+      text: "Our Azurion Image Guided Therapy System allows you to easily and confidently perform a wide range of routine..",
+      linkText: "View Azurion",
+      linkTo: "/category/Azurion",
+    }, 
+    {
+      imgSrc: "https://www.philips.co.in/c-dam/b2c/master/experience/hs/sleep-apnea-therapy/sleep-apnea-machines/CPAP-machines.jpg",
+      title: "Respironics",
+      text: "They offer user-friendly and innovative sleep therapy devices, ventilators, and oxygen concentrators. With a commitment to quality, innovation, and patient care..",
+      linkText: "View Respironics",
+      linkTo: "/category/Respironics",
     },
   ];
 
