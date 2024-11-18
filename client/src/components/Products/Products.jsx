@@ -40,6 +40,13 @@ const Products = () => {
       linkText: "View Ultrasound Machines",
       linkTo: "/category/Ultrasound Machine",
     },
+    {
+      imgSrc: "https://images.philips.com/is/image/philipsconsumer/e3dd3cbddbd54734bfb5ab7600d9a27c?&wid=305&hei=171&$jpglarge$",
+      title: "C-ARM",
+      text: "Our Azurion Image Guided Therapy System allows you to easily and confidently perform a wide range of routine...",
+      linkText: "View C-ARM",
+      linkTo: "/category/C-ARM",
+    },
   ];
 
   return (
