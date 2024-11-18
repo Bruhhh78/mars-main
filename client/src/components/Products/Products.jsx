@@ -61,6 +61,13 @@ const Products = () => {
       linkText: "View Respironics",
       linkTo: "/category/Respironics",
     },
+      {
+      imgSrc: "https://images.philips.com/is/image/philipsconsumer/7f2726e014064560974ca8fc00b5d55e?wid=305&hei=229&$pnglarge$",
+      title: "MRI",
+      text: "Just as every patient is different, so is every community. Your community may have specific imaging needs, and you need an MR system that can adapt to those needs..",
+      linkText: "View MRI",
+      linkTo: "/category/MRI",
+    },
   ];
 
   return (
