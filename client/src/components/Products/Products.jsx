@@ -37,7 +37,7 @@ const Products = () => {
       imgSrc: "https://images.philips.com/is/image/philipsconsumer/e3dd3cbddbd54734bfb5ab7600d9a27c?&wid=305&hei=171&$jpglarge$",
       title: "CathLab",
       text: "Our Azurion Image Guided Therapy System allows you to easily and confidently perform a wide range of routine..",
-      linkText: "CathLab",
+      linkText: "View CathLab",
       linkTo: "/category/Azurion",
     },
     {
