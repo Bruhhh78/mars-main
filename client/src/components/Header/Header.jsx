@@ -19,7 +19,7 @@ const Header = () => {
                 to="/"
                 className="navbar-brand d-flex align-items-center"
               >
-               <img src="/mars-main-logo.png"  alt="Mars Logo"
+               <img src="/mars-main-logo.png"  alt="Mars-Logo"
                   className="h-28 w-auto" />
               </NavLink>
               <button type="button" className="d-none navbar-show-btn">
