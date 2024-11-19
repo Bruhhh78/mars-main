@@ -19,8 +19,8 @@ const Header = () => {
                 to="/"
                 className="navbar-brand d-flex align-items-center"
               >
-                <span className="brand-shape d-inline-block text-white">M</span>
-                <span className="brand-text fw-7">Mars Healthcare</span>
+               <img src="/mars-main-logo.png"  alt="Mars Logo"
+                  className="h-28 w-auto" />
               </NavLink>
               <button type="button" className="d-none navbar-show-btn">
                 <i className="fas fa-bars"></i>
