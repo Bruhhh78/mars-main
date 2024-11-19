@@ -23,7 +23,7 @@ import OxygenConcentrator from "./components/Brochures/OxygenConcentrator.jsx";
 import UltrasoundBrochure from "./components/Brochures/UltrasoundBrochure.jsx";
 import XRayBrochure from "./components/Brochures/XRayBrochure.jsx";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop.jsx";
-import AnimatedCursor from "./components/AnimatedCursor/AnimatedCursor.jsx";
+// import AnimatedCursor from "./components/AnimatedCursor/AnimatedCursor.jsx";
 
 const App = () => {
   const queryClient = new QueryClient();
@@ -37,7 +37,7 @@ const App = () => {
     <UserDetailContext.Provider value={{ userDetails, setUserDetails }}>
       <QueryClientProvider client={queryClient}>
         <BrowserRouter>
-          <AnimatedCursor />
+{/*           <AnimatedCursor /> */}
           <ScrollToTop />
           <Routes>
             <Route element={<Layout />}>
