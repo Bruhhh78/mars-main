@@ -85,7 +85,7 @@ const Header = () => {
                   {!isAuthenticated ? (
                     <button
                       onClick={loginWithRedirect}
-                      className="nav-link text-white text-nowrap px-6 py-3 bg-transparent border-2 border-white rounded-lg text-lg font-medium transition-all duration-300 ease-in-out hover:bg-white hover:text-black hover:border-transparent focus:outline-none"
+                      className="nav-link ,text-white text-nowrap px-6 py-3 bg-transparent border-2 border-white rounded-lg text-lg font-medium transition-all duration-300 ease-in-out hover:bg-white hover:text-black hover:border-transparent focus:outline-none"
                     >
                       Login/SignUp
                     </button>
