@@ -3,9 +3,9 @@ import React from 'react';
 const CTScanBrochure = () => {
   // List of brochure filenames or URLs
   const brochures = [
-    { name: 'Philips CT Scanner', file: 'public/brochures/ct-6000-ict.pdf' },
-    { name: 'Ingenuity Core Ct Scanner', file: '/public/brochures/incisive-ct-ct-scanner.pdf' },
-    { name: 'Svity Scan CT 6000 ICT', file: 'public/brochures/ingenuity-core-ct-scanner.pdf' },
+    { name: 'Philips CT Scanner', file: '/brochures/ct-6000-ict.pdf' },
+    { name: 'Ingenuity Core Ct Scanner', file: '/brochures/incisive-ct-ct-scanner.pdf' },
+    { name: 'Svity Scan CT 6000 ICT', file: '/brochures/ingenuity-core-ct-scanner.pdf' },
   ];
 
   // Function to handle brochure download
