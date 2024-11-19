@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useMutation } from "react-query";
-import { useParams } from "react-router-dom";
-import { getProductById} from "../../utils/api";
+import { NavLink, useParams } from "react-router-dom";
+import { getProductById } from "../../utils/api";
 import { toast } from "react-toastify";
 import { PuffLoader } from "react-spinners";
 // import useAuthCheck from "../hooks/useAuthCheck";
@@ -24,7 +24,6 @@ const MainProduct = () => {
     userDetails: { token, bookings },
     setUserDetails,
   } = useContext(UserDetailContext);
-
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -68,7 +67,10 @@ const MainProduct = () => {
         </h2>
       </div>
     );
-
+  // Helper function to format date
+  const formatDate = (date) => {
+    return date ? new Date(date).toLocaleDateString() : "N/A";
+  };
 
   // Helper function to render specifications
   const renderSpecs = (specs) => {
@@ -130,14 +132,11 @@ const MainProduct = () => {
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row -mx-2 mb-4">
           <div className="w-full sm:w-1/2 px-2 mb-4 sm:mb-0 m-2 p-2">
-            <button
-              className="w-full bg-gray-900 dark:bg-blue-500 text-white py-2 px-4 rounded-3xl font-bold hover:bg-blue-300 dark:hover:bg-blue-400 text-sm sm:text-lg"
-              onClick={() => {
-                validateLogin() && setModalOpened(true);
-              }}
-            >
-              Book Your Visit
-            </button>
+            <NavLink to="/appointment">
+              <button className="w-full bg-gray-900 dark:bg-blue-500 text-white py-2 px-4 rounded-3xl font-bold hover:bg-blue-300 dark:hover:bg-blue-400 text-sm sm:text-lg">
+                Book Appointment
+              </button>
+            </NavLink>
           </div>
         </div>
       </div>
