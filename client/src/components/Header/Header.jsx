@@ -2,11 +2,11 @@ import React from "react";
 import "./Header.css";
 import "./Utilities.css";
 import { NavLink } from "react-router-dom";
-import { useAuth0 } from "@auth0/auth0-react";
-import ProfileMenu from "../ProfileMenu/ProfileMenu";
+// import { useAuth0 } from "@auth0/auth0-react";
+// import ProfileMenu from "../ProfileMenu/ProfileMenu";
 
 const Header = () => {
-  const { loginWithRedirect, isAuthenticated, user, logout } = useAuth0();
+  // const { loginWithRedirect, isAuthenticated, user, logout } = useAuth0();
   // const {validateLogin} = useAuthCheck()
 
   return (
@@ -81,7 +81,7 @@ const Header = () => {
                     Contact Us
                   </NavLink>
                 </li>
-                <li className="nav-item">
+{/*                 <li className="nav-item">
                   {!isAuthenticated ? (
                     <button
                       onClick={loginWithRedirect}
@@ -92,7 +92,7 @@ const Header = () => {
                   ) : (
                     <ProfileMenu user={user} logout={logout}/>
                   )}
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>
