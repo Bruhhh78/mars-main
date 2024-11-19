@@ -1,5 +1,5 @@
 import axios from "axios";
-import dayjs from "dayjs";
+// import dayjs from "dayjs";
 import { toast } from "react-toastify";
 
 export const api = axios.create({
@@ -44,81 +44,81 @@ export const getProductById = async (id) => {
 
 // Function to create a user
 
-export const createUser = async (email, token) => {
-  try {
-    await api.post(
-      `/user/register`,
-      { email },
-      {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      }
-    );
-  } catch (error) {
-    toast.error("Something Went Wroong While Creating a User...");
-    throw error;
-  }
-};
+// export const createUser = async (email, token) => {
+//   try {
+//     await api.post(
+//       `/user/register`,
+//       { email },
+//       {
+//         headers: {
+//           Authorization: `Bearer ${token}`,
+//         },
+//       }
+//     );
+//   } catch (error) {
+//     toast.error("Something Went Wroong While Creating a User...");
+//     throw error;
+//   }
+// };
 
 // Booking The Visit
-export const bookVisit = async (date, productId, email, token) => {
-  try {
-    await api.post(
-      `/user/bookvisit/${productId}`,
-      {
-        email,
-        id: productId,
-        date: dayjs(date).format("DD/MM/YYYY"),
-      },
-      {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      }
-    );
-  } catch (error) {
-    toast.error("Something went wrong, Please try again");
-    throw error;
-  }
-};
+// export const bookVisit = async (date, productId, email, token) => {
+//   try {
+//     await api.post(
+//       `/user/bookvisit/${productId}`,
+//       {
+//         email,
+//         id: productId,
+//         date: dayjs(date).format("DD/MM/YYYY"),
+//       },
+//       {
+//         headers: {
+//           Authorization: `Bearer ${token}`,
+//         },
+//       }
+//     );
+//   } catch (error) {
+//     toast.error("Something went wrong, Please try again");
+//     throw error;
+//   }
+// };
 
 // Canceling A Booking
-export const removeBooking = async (id, email, token) => {
-  try {
-    await api.post(
-      `/user/cancelbooking/${id}`,
-      {
-        email,
-      },
-      {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      }
-    );
-  } catch (error) {
-    toast.error("Someting went wrong, please try Again");
-    throw error;
-  }
-};
+// export const removeBooking = async (id, email, token) => {
+//   try {
+//     await api.post(
+//       `/user/cancelbooking/${id}`,
+//       {
+//         email,
+//       },
+//       {
+//         headers: {
+//           Authorization: `Bearer ${token}`,
+//         },
+//       }
+//     );
+//   } catch (error) {
+//     toast.error("Someting went wrong, please try Again");
+//     throw error;
+//   }
+// };
 
 // Adding it to Favourites
-export const toFav = async(pid,email,token)=>{
-  try{
-    await api.post(
-      `/user/toFav/${pid}`,
-      {
-        email,
-      },
-      {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      }
-    );
-  }catch(error){
-    toast.error("Someting went wrong, please try Again");
-    throw error;
-  }
-}
+// export const toFav = async(pid,email,token)=>{
+//   try{
+//     await api.post(
+//       `/user/toFav/${pid}`,
+//       {
+//         email,
+//       },
+//       {
+//         headers: {
+//           Authorization: `Bearer ${token}`,
+//         },
+//       }
+//     );
+//   }catch(error){
+//     toast.error("Someting went wrong, please try Again");
+//     throw error;
+//   }
+// }
