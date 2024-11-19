@@ -15,8 +15,8 @@ import MainProduct from "./pages/MainProduct/MainProduct.jsx";
 import UserDetailContext from "./context/UserDetailContext.js";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import BookingsList from "./pages/BookingsList/BookingList.jsx";
-import AddToFavourite from "./pages/FavouritesList/FavouritesList.jsx";
+// import BookingsList from "./pages/BookingsList/BookingList.jsx";
+// import AddToFavourite from "./pages/FavouritesList/FavouritesList.jsx";
 import CTScanBrochure from "./components/Brochures/CTScanBrochure.jsx";
 import DiagnosticMachine from "./components/Brochures/DiagnosticMachine.jsx";
 import OxygenConcentrator from "./components/Brochures/OxygenConcentrator.jsx";
@@ -49,8 +49,8 @@ const App = () => {
               <Route path="/maintenance" element={<Maintenance />} />
               <Route path="/category/:category" element={<ProductList />} />
               <Route path="/product/:id" element={<MainProduct />} />
-              <Route path="/bookings" element={<BookingsList />} />
-              <Route path="/favourites" element={<AddToFavourite />} />
+{/*               <Route path="/bookings" element={<BookingsList />} />
+              <Route path="/favourites" element={<AddToFavourite />} /> */}
               <Route path="/CtScanBrochure" element={<CTScanBrochure />} />
               <Route path="/DiagnosticMachine" element={<DiagnosticMachine />} />
               <Route path="/OxygenBrochure" element={<OxygenConcentrator />} />
