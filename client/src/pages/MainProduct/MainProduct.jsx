@@ -1,45 +1,30 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useMutation } from "react-query";
 import { useParams } from "react-router-dom";
-import { getProductById, removeBooking } from "../../utils/api";
+import { getProductById} from "../../utils/api";
 import { toast } from "react-toastify";
 import { PuffLoader } from "react-spinners";
-import useAuthCheck from "../hooks/useAuthCheck";
+// import useAuthCheck from "../hooks/useAuthCheck";
 import { useAuth0 } from "@auth0/auth0-react";
 import UserDetailContext from "../../context/UserDetailContext";
-import BookingModal from "../../components/BookingModal/BookingModal";
-import { Button } from "@mantine/core";
-import AddToFavourites from "../../components/AddToFavourites/AddToFavourites";
+// import BookingModal from "../../components/BookingModal/BookingModal";
+// import { Button } from "@mantine/core";
+// import AddToFavourites from "../../components/AddToFavourites/AddToFavourites";
 
 const MainProduct = () => {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [modalOpened, setModalOpened] = useState(false);
-  const { validateLogin } = useAuthCheck();
-  const { user } = useAuth0();
+  // const [modalOpened, setModalOpened] = useState(false);
+  // const { validateLogin } = useAuthCheck();
+  // const { user } = useAuth0();
 
   const {
     userDetails: { token, bookings },
     setUserDetails,
   } = useContext(UserDetailContext);
 
-  // Ensure bookings is an array before using .map()
-  const bookingsArray = Array.isArray(bookings) ? bookings : [];
-
-  const { mutate: cancelBooking, isLoading: cancelling } = useMutation({
-    mutationFn: () => removeBooking(id, user?.email, token),
-    onSuccess: () => {
-      // Ensure prev.bookings is always an array
-      setUserDetails((prev) => ({
-        ...prev,
-        bookings: Array.isArray(prev.bookings) ? prev.bookings.filter((booking) => booking?.id !== id) : [],
-      }));
-      toast.success("Booking cancelled", { position: "bottom-right" });
-    },
-  });
-  
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -47,7 +32,7 @@ const MainProduct = () => {
         setLoading(true);
         const productData = await getProductById(id);
         setProduct(productData.product); // Assuming response structure is { product: { ... } }
-        // console.log("Fetched Product Data:", productData.product);
+        console.log("Fetched Product Data:", productData.product);
       } catch (err) {
         setError(err);
         toast.error("Failed to load product data.");
@@ -84,10 +69,6 @@ const MainProduct = () => {
       </div>
     );
 
-  // Helper function to format date
-  const formatDate = (date) => {
-    return date ? new Date(date).toLocaleDateString() : "N/A";
-  };
 
   // Helper function to render specifications
   const renderSpecs = (specs) => {
@@ -149,42 +130,14 @@ const MainProduct = () => {
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row -mx-2 mb-4">
           <div className="w-full sm:w-1/2 px-2 mb-4 sm:mb-0 m-2 p-2">
-            {bookingsArray.some((booking) => booking.id === id) ? (
-              <>
-                <Button
-                  variant="outline"
-                  w={"100%"}
-                  color="red"
-                  onClick={() => cancelBooking()}
-                  disabled={cancelling}
-                >
-                  <span>Cancel booking</span>
-                </Button>
-                <span>
-                  Your visit is already booked for date:{" "}
-                  {bookingsArray.find((booking) => booking?.id === id)?.date}
-                </span>
-              </>
-            ) : (
-              <button
-                className="w-full bg-gray-900 dark:bg-blue-500 text-white py-2 px-4 rounded-3xl font-bold hover:bg-blue-300 dark:hover:bg-blue-400 text-sm sm:text-lg"
-                onClick={() => {
-                  validateLogin() && setModalOpened(true);
-                }}
-              >
-                Book Your Visit
-              </button>
-            )}
-
-            <BookingModal
-              opened={modalOpened}
-              setOpened={setModalOpened}
-              productId={id}
-              email={user?.email}
-            />
-          </div>
-          <div className="w-full sm:w-1/2 px-2 m-1 p-2">
-            <AddToFavourites id={id} />
+            <button
+              className="w-full bg-gray-900 dark:bg-blue-500 text-white py-2 px-4 rounded-3xl font-bold hover:bg-blue-300 dark:hover:bg-blue-400 text-sm sm:text-lg"
+              onClick={() => {
+                validateLogin() && setModalOpened(true);
+              }}
+            >
+              Book Your Visit
+            </button>
           </div>
         </div>
       </div>
