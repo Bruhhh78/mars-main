@@ -2,7 +2,7 @@ import React from "react";
 import { HiChatBubbleBottomCenter } from "react-icons/hi2";
 
 const MessageButton = () => {
-  const phoneNumber = '8543099414'; 
+  const phoneNumber = '8808055633'; 
   const message = 'Hello, I would like to inquire about your product.';
 
   const handleSMSClick = () => {
