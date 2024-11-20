@@ -2,7 +2,7 @@ import React from 'react'
 import { BsFillChatDotsFill } from 'react-icons/bs'
 
 const EmailButton = () => {
-  const email = 'm69unknown@gmail.com'; 
+  const email = 'marswebhealthcare@gmail.com'; 
   const subject = 'Product Inquiry'; 
   const body = 'Hello, I would like to inquire about your product.';
 
