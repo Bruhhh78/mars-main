@@ -86,9 +86,6 @@ const DropdownItem = React.forwardRef(({ imageSrc, alt, menuItems, isOpen, onCli
 const GodrejInterioDropdown = React.forwardRef((props, ref) => {
   const menuItems = [
     { name: "Google", url: "https://www.google.com" },
-    { name: "Facebook", url: "https://www.facebook.com" },
-    { name: "WhatsApp", url: "https://www.whatsapp.com" },
-    { name: "Instagram", url: "https://www.instagram.com" },
   ];
   
   return (
@@ -105,9 +102,6 @@ const GodrejInterioDropdown = React.forwardRef((props, ref) => {
 const MasimoDropdown = React.forwardRef((props, ref) => {
   const menuItems = [
     { name: "LinkedIn", url: "https://www.linkedin.com" },
-    { name: "Twitter", url: "https://twitter.com" },
-    { name: "Pinterest", url: "https://www.pinterest.com" },
-    { name: "Snapchat", url: "https://www.snapchat.com" },
   ];
 
   return (
@@ -144,10 +138,7 @@ const PhilipsDropdown = React.forwardRef((props, ref) => {
 
 const PhoenixDropdown = React.forwardRef((props, ref) => {
   const menuItems = [
-    { name: "TikTok", url: "https://www.tiktok.com" },
-    { name: "Medium", url: "https://medium.com" },
-    { name: "Flickr", url: "https://www.flickr.com" },
-    { name: "Vimeo", url: "https://vimeo.com" },
+       { name: "Google", url: "https://www.google.com" },
   ];
 
   return (
