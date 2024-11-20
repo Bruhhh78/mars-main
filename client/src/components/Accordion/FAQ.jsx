@@ -10,11 +10,11 @@ const FAQ = () => {
       />
       <Accordion
         title="Will I be notified regarding technician visit for installation?"
-        answer="You will be notified via SMS once the Godrej Interio technician visit is confirmed."
+        answer="You will be notified via SMS once the Mars HealthCare technician visit is confirmed."
       />
       <Accordion
         title="What if I face any issue with furniture after installation?"
-        answer="Please get in touch with our Service Team for any service request - marshealthcare@gmail.com or 7618975642/8543099414 or WhatsApp on 8543099414."
+        answer="Please get in touch with our Service Team for any service request - marswebhealthcare@gmail.com or 8808055633 or WhatsApp on 8808055633."
       />
       {/* <Accordion title="Testing" answer="testing Answer" /> */}
     </div>
