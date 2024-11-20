@@ -2,7 +2,7 @@ import React from "react";
 import { MdCall } from "react-icons/md";
 
 const CallButton = () => {
-  const phoneNumber = '8543099414';
+  const phoneNumber = '8808055633';
   return (
     <div className="flexColCenter mode">
       <div className="flexStart">
