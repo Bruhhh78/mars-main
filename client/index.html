@@ -26,60 +26,58 @@
 <body>
   <div id="root"></div>
   <!-- Scripts -->
-  <script type="module" src="/src/main.jsx"></script>
-  <!-- jquery cdn -->
-  <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
-    crossorigin="anonymous"></script>
-  <!-- owl carousel -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
-    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <!-- custom js -->
-  <script>
-    $(document).ready(function () {
-      // Cache DOM elements
-      const $navbarBox = $('.navbar-box');
-      const $navbarShowBtn = $('.navbar-show-btn');
-      const $navbarHideBtn = $('.navbar-hide-btn');
-      const $navbarLinks = $('.navbar-box a'); // All links in navbar (including sub-menu)
+  <!-- Include jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Include Owl Carousel -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<!-- Include FontAwesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-      // Initialize Owl Carousel
-      $('.feedback-slider').owlCarousel({
-        loop: false,
-        margin: 10,
-        nav: true,
-        items: 1,
-        autoplay: true,
-        navText: ["<i class='fas fa-arrow-left'></i>", "<i class='fas fa-arrow-right'></i>"]
-      });
+<script>
+  $(document).ready(function () {
+    // Cache DOM elements
+    const $navbarBox = $('.navbar-box');
+    const $navbarShowBtn = $('.navbar-show-btn');
+    const $navbarHideBtn = $('.navbar-hide-btn');
+    const $navbarLinks = $('.navbar-box a'); // All links in navbar (including sub-menu)
 
-      // Stop animation on window resize
-      let resizeTimer;
-      $(window).resize(function () {
-        $('body').addClass('resize-animation-stopper');
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(() => {
-          $('body').removeClass('resize-animation-stopper');
-        }, 400);
-      });
-
-      // Show navbar
-      $navbarShowBtn.on('click', function () {
-        $navbarBox.addClass('navbar-box-show');
-      });
-
-      // Hide navbar
-      $navbarHideBtn.on('click', function () {
-        $navbarBox.removeClass('navbar-box-show');
-      });
-
-      // Close navbar when any link is clicked (including sub-menu links)
-      $navbarLinks.on('click', function () {
-        $navbarBox.removeClass('navbar-box-show');
-      });
+    // Initialize Owl Carousel
+    $('.feedback-slider').owlCarousel({
+      loop: false,
+      margin: 10,
+      nav: true,
+      items: 1,
+      autoplay: true,
+      navText: ["<i class='fas fa-arrow-left'></i>", "<i class='fas fa-arrow-right'></i>"]
     });
 
-  </script>
+    // Stop animation on window resize
+    let resizeTimer;
+    $(window).resize(function () {
+      $('body').addClass('resize-animation-stopper');
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        $('body').removeClass('resize-animation-stopper');
+      }, 400);
+    });
+
+    // Show navbar
+    $navbarShowBtn.on('click', function () {
+      $navbarBox.addClass('navbar-box-show');
+    });
+
+    // Hide navbar
+    $navbarHideBtn.on('click', function () {
+      $navbarBox.removeClass('navbar-box-show');
+    });
+
+    // Close navbar when any link is clicked (including sub-menu links)
+    $navbarLinks.on('click', function () {
+      $navbarBox.removeClass('navbar-box-show');
+    });
+  });
+</script>
 </body>
 
 </html>
