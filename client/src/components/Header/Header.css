@@ -157,6 +157,10 @@ button{
     width: 60px;
 }
 
+.navbar-box-show {
+    transition: transform 0.4s ease-in-out;
+    -webkit-transition: transform 0.4s ease-in-out;
+}
 
 /* Media queries */
 @media screen and (max-width: 1120px){
