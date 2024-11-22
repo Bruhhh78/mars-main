@@ -37,7 +37,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <!-- custom js -->
   <script>
-    $(document).ready(function () {
+$(document).ready(function () {
     // Cache DOM elements
     const $navbarBox = $('.navbar-box');
     const $navbarShowBtn = $('.navbar-show-btn');
@@ -51,7 +51,13 @@
         nav: true,
         items: 1,
         autoplay: true,
-        navText: ["<i class='fas fa-arrow-left'></i>", "<i class='fas fa-arrow-right'></i>"]
+        autoplayHoverPause: true, // Pauses autoplay on hover
+        navText: ["<i class='fas fa-arrow-left'></i>", "<i class='fas fa-arrow-right'></i>"],
+        responsive: {
+            0: { items: 1 },
+            768: { items: 2 },
+            1024: { items: 3 }
+        }
     });
 
     // Stop animation on window resize
@@ -65,21 +71,36 @@
     });
 
     // Show navbar
+    const toggleNavbar = (show) => {
+        if (show) {
+            $navbarBox.addClass('navbar-box-show');
+        } else {
+            $navbarBox.removeClass('navbar-box-show');
+        }
+    };
+
     $navbarShowBtn.on('click touchstart', function (e) {
-        e.preventDefault(); // Prevent any default action on iOS
-        $navbarBox.addClass('navbar-box-show');
+        e.preventDefault();
+        toggleNavbar(true);
     });
 
     // Hide navbar
     $navbarHideBtn.on('click touchstart', function (e) {
         e.preventDefault();
-        $navbarBox.removeClass('navbar-box-show');
+        toggleNavbar(false);
     });
 
     // Close navbar when any link is clicked (including sub-menu links)
     $navbarLinks.on('click touchstart', function (e) {
-        e.preventDefault();
-        $navbarBox.removeClass('navbar-box-show');
+        const link = $(this).attr('href');
+        toggleNavbar(false);
+
+        // If the link has an href, navigate after a slight delay
+        if (link && link !== '#') {
+            setTimeout(() => {
+                window.location.href = link;
+            }, 300); // Delay to allow the menu to close first
+        }
     });
 });
 
