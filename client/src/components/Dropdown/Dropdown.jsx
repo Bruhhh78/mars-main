@@ -117,12 +117,12 @@ const MasimoDropdown = React.forwardRef((props, ref) => {
 
 const PhilipsDropdown = React.forwardRef((props, ref) => {
  const menuItems = [
-    { name: "EPIQ Elite", url: "https://mars-main-frontend.vercel.app/product/67396f93a68681ac70aaa52e" },
-    { name: "EPIQ CVx", url: "http://localhost:5173/product/672c5a280cc26711be52f996" },
+    { name: "EPIQ Elite", url: "https://www.marshealthcare.in/product/67396f93a68681ac70aaa52e" },
+    { name: "EPIQ CVx", url: "https://www.marshealthcare.in/product/672c5a280cc26711be52f996" },
     { name: "5500 Series", url: "https://www.philips.co.in/healthcare/product/HC795140/5000-series-hc795140-premium-compact-ultrasound-system" },
-    { name: "5500 CV", url: "https://mars-main-frontend.vercel.app/product/673d894747483db02540c46e" },
-    { name: "Affiniti CVx", url: "https://mars-main-frontend.vercel.app/product/673b11182c46d0dbe36732af" },
-    { name: "Affiniti 70", url: "https://mars-main-frontend.vercel.app/product/67396e64a68681ac70aaa52c" },
+    { name: "5500 CV", url: "https://www.marshealthcare.in/product/673d894747483db02540c46e" },
+    { name: "Affiniti CVx", url: "https://www.marshealthcare.in/product/673b11182c46d0dbe36732af" },
+    { name: "Affiniti 70", url: "https://www.marshealthcare.in/product/67396e64a68681ac70aaa52c" },
   ];
 
   return (
