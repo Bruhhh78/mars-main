@@ -45,7 +45,7 @@ const Banner = () => {
 
               {/* Button */}
               <NavLink to="/appointment" className="btn btn-secondary">
-                Book Appointment
+                Request Demo
               </NavLink>
             </div>
           </div>
