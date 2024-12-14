@@ -128,7 +128,7 @@ const Appointment = () => {
           <p className="text-sm text-gray-600 mt-2 text-center">{result}</p>
         )}
       </form>
-    </section>
+    </section> 
   );
 };
 
