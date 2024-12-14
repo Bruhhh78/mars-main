@@ -51,8 +51,8 @@ const Appointment = () => {
         onSubmit={onSubmit}
         className="max-w-lg mx-auto bg-white shadow-lg rounded-lg p-6"
       >
-        <h2 className="text-2xl font-semibold text-blue-500 mb-4">
-          Request a Demo
+        <h2 className="text-2xl font-semibold text-blue-500 mb-4 text-center">
+          Request Product Demo
         </h2>
         <div className="mb-4">
           <label className="block text-sm font-medium text-gray-700">
