@@ -27,7 +27,7 @@ const Products = () => {
       linkTo: "/category/X-Ray",
     },
     {
-      imgSrc: "/Ultrasound_Machine_New2.jpg",
+      imgSrc: "https://images.philips.com/is/image/philipsconsumer/5d3ea50c2fef493f9d87b0a801747af5?$jpglarge$&wid=420&hei=360",
       title: "Ultrasound Machine",
       text: "Leading Distributor / Channel Partner of ClearVue 650 Ultrasound System, Clearvue 350 Ultrasound Machine, ClearVue 850 Ultrasound Machine...",
       linkText: "View Ultrasound Machines",
