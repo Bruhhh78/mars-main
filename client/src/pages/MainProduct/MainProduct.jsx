@@ -134,7 +134,7 @@ const MainProduct = () => {
           <div className="w-full sm:w-1/2 px-2 mb-4 sm:mb-0 m-2 p-2">
             <NavLink to="/appointment">
               <button className="w-full bg-gray-900 dark:bg-blue-500 text-white py-2 px-4 rounded-3xl font-bold hover:bg-blue-300 dark:hover:bg-blue-400 text-sm sm:text-lg">
-                Book Appointment
+                Request Demo
               </button>
             </NavLink>
           </div>
